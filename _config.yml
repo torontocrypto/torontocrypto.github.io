@@ -1,0 +1,16 @@
+# Site settings
+title: Toronto Crypto
+email: info@torontocrypto.org
+description: Toronto's Privacy Advocacy
+url: "https://www.torontocrypto.org"
+twitter_username: TorontoCrypto
+github_username: torontocrypto
+
+# Build settings
+markdown: kramdown
+
+plugins:
+  - jekyll-sitemap
+
+exclude:
+    - vendor

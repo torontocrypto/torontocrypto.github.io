@@ -1,0 +1,46 @@
+---
+layout: default
+permalink: /downloads/
+description: Free Downloads For Your Protection
+keywords: Cryptoparty, PGP, i2p, tor, privacy, security, hacking, safety
+title: Downloads
+---
+
+<section id="downloads" class="top">
+    <div class="row">
+        <div class="large-12 columns">
+            <h2>Index of /downloads</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-1 columns">&nbsp;</div>
+        <div class="large-5 columns"><strong>Name</strong></div>
+        <div class="large-2 columns"><strong>Last modified</strong></div>
+        <div class="large-1 columns text-right"><strong>Size</strong></div>
+        <div class="large-3 columns"><strong>Description</strong></div>
+    </div>
+    <div class="row">
+        <div class="large-1 columns"><img src="/img/icons/back.gif" alt="[PARENTDIR]"></div>
+        <div class="large-5 columns"><a href="/">Parent Directory</a></div>
+        <div class="large-2 columns">&nbsp;</div>
+        <div class="large-1 columns text-right">-</div>
+        <div class="large-3 columns">&nbsp;</div>
+    </div>
+    {% for file in site.static_files %}
+    {% if file.path contains 'files/' %}
+        {% assign fname = file.path | remove_first:"files/" | remove_first:"/" %}
+        {% assign fdescription = fname | replace:'_',' ' %}
+    <div class="row">
+        <div class="large-1 columns"><img src="/img/icons/layout.gif" alt="[FILE]"></div>
+        <div class="large-5 columns"><a href="/files/{{ fname }}" target="_blank">{{ fname }}</a></div>
+        <div class="large-2 columns">{{ file.modified_time | date: "%F" }}</div>
+        <div class="large-1 columns text-right">?K</div>
+        <div class="large-3 columns">{{ fdescription | replace:file.extname,'' }}</div>
+    </div>
+    {% endif %}{% endfor %}
+    <div class="row">
+        <div class="large-12 columns">
+            <address>Apache/2.4.1 (Ubuntu) Server at 217.23.11.33 Port 80</address>
+        </div>
+    </div>
+</section>

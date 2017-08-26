@@ -1,0 +1,37 @@
+---
+layout: default
+permalink: /
+title: Toronto's Privacy Advocacy
+description: Toronto Crypto Is Toronto's Privacy Advocacy
+keywords: CryptoParty, Digifest, toronto, PGP, encryption, hacking, security, privacy, i2p, tor
+---
+
+<section id="headline">
+    <div class="row">
+        <div class="large-12 columns">
+            <h1>{{ site.title }}</h1>
+            <h3>
+                Toronto's privacy advocacy.
+            </h3>
+            <!-- <h4>Next Event: August 15th + 16th, 2015</h4>
+            <a href="/blog/2015/07/19/the-i2p-team-comes-to-toronto-with-i2pcon.html">Learn More</a> -->
+        </div>
+    </div>
+</section>
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml">
+<section id="{{ post.anchor }}">
+    <div class="row">
+        <div class="large-8 columns">
+
+            {% for post in site.categories.blog limit:2 %}
+            {% include post.html %}
+            {% endfor %}
+
+            <a href="/blog">See all blog posts →</a>
+
+        </div>
+        <div class="large-4 columns">
+            {% include twitter.html %}
+        </div>
+    </div>
+</section>
